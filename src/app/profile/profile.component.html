@@ -1,6 +1,7 @@
+<h1>Git Search</h1>
 <form action="" class="searchme">
   <div class="form-group">
-      <input type="text" class="form-control" placeholder="search git users">
+      <input type="text" class="form-control" placeholder="Search git Users with username" [(ngModel)]="username" name="username" (keyup)="findProfile()">
   </div>
 </form>
 <div *ngIf="profile">
@@ -25,10 +26,10 @@
       <div class="col-md-4">
         <div>
           <p>
-            <span class="label label-default">Followers{{profile.followers}}</span>
-            <span class="label label-default">Following {{profile.following}}</span>
-            <span class="label label-default">Public Gists{{profile.public_gists}}</span>
-            <span class="label label-default">Public Repos{{profile.public_repos}}</span>
+            <span class="btn btn-success">Followers{{profile.followers}}</span>
+            <span class="btn btn-info">Following {{profile.following}}</span>
+            <span class="btn btn-warning">Public Gists{{profile.public_gists}}</span>
+            <span class="btn btn-success">Public Repos{{profile.public_repos}}</span>
           </p>
           <p><a href="{{profile.html_url}}" class="btn btn-success btn-sm">Profile View</a></p>
           <div class="panel panel-default">

@@ -7,20 +7,26 @@ import { ProfilesService } from '../profile.service';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
- profile: any[];
-repos: any[];
+ profile: any;
+ repos: any;
+ username = 'Kariuki62';
 
   constructor(private profileService: ProfilesService) {
-     this.profileService.getUserInfo().subscribe(profile => {
-       console.log(profile);
-       this.profile = profile;
-     });
-     this.profileService.getReposInfo().subscribe(repos => {
-       console.log(repos);
-       this.repos = repos;
-     });
+
 
   }
+
+findProfile(){
+  this.profileService.updateProfile(this.username);
+  this.profileService.getUserInfo().subscribe(profile => {
+    console.log(profile);
+    this.profile = profile;
+  });
+  this.profileService.getReposInfo().subscribe(repos => {
+    console.log(repos);
+    this.repos = repos;
+  });
+}
 
   ngOnInit() {
   }
