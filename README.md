@@ -1,4 +1,4 @@
-# FIRST ANGULAR QUOTE APP
+# Git Search App
 
 ### Author: Kelvin 
 
