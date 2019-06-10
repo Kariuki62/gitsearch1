@@ -6,7 +6,7 @@ This is a prrogram that helps a user search for users on github and gives them a
 
 ## Getting Started
 Have a review of my Github account and visit the Repository.
-https://github.com/Kariuki62/gisearch1
+https://github.com/Kariuki62/gitsearch1
 
 ### Prerequisites
 
